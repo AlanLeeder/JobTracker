@@ -1,0 +1,438 @@
+body{
+    background-color: antiquewhite;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    /*align-items and justify items equivalent*/
+    place-items: center; 
+    /*viewpoint height and 100% browser height*/
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.form-group{
+    /*seperates the login button from the two inputs*/
+    margin-bottom: 25px;
+
+    /*seperates the login-description from the two inputs*/
+    margin-top: 25px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input{
+    width: 85%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    /*Applied when the user clicks the input box*/
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    outline: none;
+}
+
+.login-card{
+    background-color: white;
+
+    /*Adds space inside the card*/
+    padding: 40px;
+
+    border-radius: 12px;
+
+    /*Controls the width of the card*/
+    width: 100%;
+    max-width: 400px;
+
+    /*creates a shadow around the login card*/
+    box-shadow: 3px 7px rgb(0, 0, 0,0.12);
+
+}
+
+.login-button{
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    width: 85px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: 0.2s ease;
+}
+
+.login-button:hover{
+    /*Applied when user hovers over the login button*/
+    background-color: #1d4ed8;
+}
+
+.brand-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.register-button{
+    background-color:#2563eb;
+    color: white;
+    border-radius: 6px;
+    width: 135px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: 0.2s ease;
+}
+
+.register-button:hover{
+    /*Applied when user hovers over the login button*/
+    background-color: #1d4ed8;
+}
+
+.register-card{
+    background-color: white;
+
+    /*Adds space inside the card*/
+    padding: 40px;
+
+    border-radius: 12px;
+
+    /*Controls the width of the card*/
+    width: 100%;
+    max-width: 400px;
+
+    /*creates a shadow around the login card*/
+    box-shadow: 3px 7px rgb(0, 0, 0,0.12);
+
+}
+
+.application-form{
+    display: grid;
+
+    /*Create two colummns that share the available width equally*/
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Smaller vertical gap and a sensible horizontal gap */
+    column-gap: 24px;
+    row-gap: 5px;
+
+    /* Prevent the form becoming unnecessarily wide */
+    max-width: 700px;
+
+    /*Keep the large card but make the form centered*/
+    margin: 0 auto;
+}
+
+/*make every form control use the full width of its grid column*/
+.application-form input,
+.application-form select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.application-form-card{
+    padding: 28px;
+}
+
+.application-form textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    /*The user can make it taller if they need to, but can't drag it sideways*/
+    resize: vertical;
+}
+
+/* Make this field stretch from the first to the final grid line */
+.form-group-wide {
+    grid-column: 1 / -1;
+}
+
+/*put the buttons beneath all of the form fields*/
+.form-actions{
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+}
+
+.dashboard-card{
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 3px 7px rgba(0,0,0,0.12);
+}
+
+.dashboard-page{
+    width: min(1000px, 90%);
+    margin: 40px auto;
+    display: grid;
+    gap: 28px;
+}
+
+.dashboard-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-button{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-button:hover{
+    background-color: #1d4ed8;
+}
+
+.secondary-button{
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.secondary-button:hover{
+    background-color: #c10000;
+}
+
+/*Allows the table to scrool horizontally on smaller screens*/
+.table-wrapper{
+    width: 100%;
+    overflow: auto;
+}
+
+/*make the table fill its card*/
+.application-display table{
+    width: 100%;
+
+    /*merge borders from each side into clean single lines*/
+    border-collapse: collapse;
+}
+
+/*Style all heading and data cells*/
+.application-display th,
+.application-display td{
+    padding: 8px 10px;
+    text-align: left;
+}
+
+/*table heading styling*/
+.application-display th{
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #374151;
+}
+
+.application-display tbody tr:hover{
+    background-color: #f5ffff;
+}
+
+/*Shared style for both small buttons inside the applications table*/
+.edit-button,
+.delete-button{
+    border: none;
+    padding: 7px 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: 0.2s ease;
+}
+
+.edit-button{
+    background-color: #2eff4ebe;
+    color: rgb(255, 255, 255);
+}
+
+.delete-button{
+    background-color: #FF6347;
+    color: white;
+    margin-left: 6px;
+}
+
+.edit-button:hover{
+    background-color: #7eff91be;
+}
+
+.delete-button:hover{
+    background-color: #c80000;
+}
+
+/*Shared apperence for every application status*/
+.status-badge{
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px; /*As round as possible*/
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/*Blue for applications that were submitted*/
+.status-applied{
+    background-color: #dbeafe;
+    color:#1d4ed8;
+}
+
+/*Yellow for interview status*/
+.status-interview{
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/*Green for offer status*/
+.status-offer{
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/*Red for rejected status*/
+.status-rejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.logout-button{
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    width: 85px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: 0.2s ease;
+}
+
+.logout-button:hover{
+    background-color: #1d4ed8;
+}
+
+/* Covers the whole browser window while the modal is open */
+.notes-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    /* Centre the modal box horizontally and vertically */
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+}
+
+/* Dark transparent layer behind the modal */
+.notes-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Box modal */
+.notes-modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 500px;
+
+    background-color: white;
+    padding: 28px;
+
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Keep the heading and X button on the same row */
+.notes-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.notes-modal-header h2 {
+    margin: 0;
+}
+
+/* X button in the top-right corner */
+.notes-modal-close {
+    border: none;
+    background: none;
+
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Style the full note */
+.full-notes-text {
+    margin-bottom: 24px;
+    line-height: 1.5;
+
+    /* Preserve line breaks entered in the textarea */
+    white-space: pre-wrap;
+
+    /* Prevent a very long word from breaking the modal */
+    overflow-wrap: break-word;
+}
+
+/* Completely hide the modal when it has the hidden attribute */
+.notes-modal[hidden] {
+    display: none;
+}
+
+/* Makes the note preview look like text rather than a normal button */
+/*keeps the table compact and stops lonng notes from changing the layout*/
+.notes-preview-button {
+    max-width: 180px;
+
+    padding: 0;
+    border: none;
+    background: none;
+
+    color: #2563eb;
+    font: inherit;
+    text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+}
+
+.notes-preview-button:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
