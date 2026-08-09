@@ -36,9 +36,11 @@ Authentication:
 - bycrpt
 - express-session
 
-# Screenshots
 
-![Login Page](Screenshots/login.png)
+# Future Improvements
+
+- New user inputs on the dashboard such as salary range and website link
+- Chart tracking the total number of applications submitted by the user
 
 
 
