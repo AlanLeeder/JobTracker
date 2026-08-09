@@ -1,3 +1,4 @@
 # JobTracker
 JobTracker is a full-stack web application built with Node.js, Express, MySQL, JavaScript, HTML, and CSS. 
-It allows users to register an account, log in, and manage their job applications through a clean and responsive dashboard with application tracking, status management, notes, and CRUD functionality.
+It allows users to register an account, log in, and manage their job applications through a 
+clean and responsive dashboard with application tracking, status management, notes, and CRUD functionality.
