@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the page resize correctly on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login JobTrack</title>
+
+    <!-- Connect to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main container used to centre the login card on the page -->
+    <main class="login-page">
+
+        <!-- Card containing all login-related content -->
+        <section class="login-card">
+
+            <!--  project name shown above the main heading -->
+            <p class="brand-name">JobTrack</p>
+
+            <h1>Welcome Back</h1>
+
+            <p class="login-description">
+                Login to manage your job applications
+            </p>
+
+            <form id="loginForm">
+
+                <!-- Group the email label and input together -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!-- Group the password label and input together -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <!--form submission. Backend listens for this commands
+                and sends the email and password to the login backend route-->
+                <button type="submit" class="login-button">
+                    Login
+                </button>
+
+            </form>
+
+            <!-- JavaScript will place login success or error messages here -->
+            <p id="message" class="message"></p>
+
+            <!-- Link for users who do not yet have an account -->
+            <p class="register-text">
+                Don't have an account?
+                <a href="register.html">Create one</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Authentication JavaScript
+    Handles login behaviour -->
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

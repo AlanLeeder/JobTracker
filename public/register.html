@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--sets the title shown in the browser tab-->
+    <title>Register</title>
+
+    <!--connects page to shared stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--main container for reg page-->
+    <main class="register-page">
+
+        <!--card that contains the registeration form and related content-->
+        <section class="register-card">
+
+            <!--Display brand name-->
+            <p class="brand-name">JobTrack</p>
+
+            <!--main heading-->
+            <h1>Create Account</h1>
+
+            <!--explaination for wha the user is signing up for-->
+            <p class="register-description">
+                Create your account to start tracking applications.
+            </p>
+
+            <!--the id used by auth.js to hanle this form-->
+            <form id="registerForm">
+
+                <!--Email input-->
+                <div class="form-group">
+
+                    <!--label to linked to the email input using email-->
+                    <label for="email">Email</label>
+
+                    <!--required field. Basic browser validation-->
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!--password input field-->
+                <div class="form-group">
+
+                    <!--label to be linked to password input-->
+                    <label for="password">Password</label>
+
+                    <!--password characters are hidden while user types-->
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter a password"
+                        required
+                    >
+                </div>
+
+                <!--submit the form.
+                auth.js listens for this form submission and sends
+                the email and password to the register backend route-->
+                <button type="submit" class="register-button">
+                    Create Account
+                </button>
+            </form>
+
+            <!--display success or error message-->
+            <p id="message"></p>
+
+            <!--give existing users a way to return to the login page-->
+            <p class="login-text">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </p>
+        </section>
+    </main>
+    <!--loads the authentication javascript
+    This handles both registeration and login behaviour-->
+    <script src="js/auth.js"></script>
+</body>
+</html>

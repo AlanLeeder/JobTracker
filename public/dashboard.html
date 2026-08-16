@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--sets the text displayed in the browser tab-->
+    <title>Dashboard</title>
+
+    <!--links the shared css stylesheet to the dashboard-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--main container for all dashboard content-->
+    <main class="dashboard-page">
+
+        <!--header containing the brand name and page title and logout button-->
+        <header class="dashboard-header">
+
+            <p class="brand-name">JobTracker</p>
+
+            <h1>Job Applications</h1>
+
+            <!--dashboard.js sends a request to the logout backend route when clicked-->
+            <button type="button" id="logoutButton" class="logout-button">
+                Log out
+            </button>
+        </header>
+
+        <!--application form used for creating and editing applications-->
+        <section class="dashboard-card application-form-card">
+
+        <h2>New Application Form</h2>
+
+        <!--dashboard.js submits these inputs once form is submitted-->
+        <form id = "applicationForm" class="application-form">
+
+            <!--company name-->
+            <div class="form-group">
+                <label for="company">Company</label>
+                <!--required input -->
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Enter Company name"
+                    required
+                >
+            </div>
+
+            <!--role title-->
+            <div class="form-group">
+                <label for="role_title">Role Title</label>
+                <!--required input-->
+                <input
+                    type="text"
+                    id="role_title"
+                    placeholder="Enter Role title"
+                    required
+                >
+            </div>
+
+            <!--Allows the user to select the current status of application
+            for the selected of listed options-->
+            <div class="form-group">
+                <label for="status">Status</label>
+
+                <select id="status" required>
+                    <option value="">Select Status</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Offer">Offer</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+
+            <!--date applied input-->
+            <div class="form-group">
+                <label for="date_applied">Date Applied</label>
+                <input
+                    type="date"
+                    id="date_applied"
+                    placeholder="Application Date"
+                    required
+                >
+            </div>
+
+            <!--notes input field that covers the whole width of the form
+            A text area allows longer notes to be entered-->
+            <div class="form-group form-group-wide">
+                <label for="notes">Notes</label>
+                
+                <textarea
+                    id="notes"
+                    placeholder="Add any notes about this application"
+                    rows="3"
+                ></textarea>
+            </div>
+
+            <!--two buttons for the user to submit or cancel the form-->
+            <div class="form-actions">
+
+                <!--create a new application or updates the application when
+                the form is in edit mode-->
+                <button type="submit" class="primary-button">
+                    Add Application
+                </button>
+
+                <!--hidden button that dashboard.js displays when
+                application is being edited-->
+                <button 
+                    type="button" 
+                    id="cancelEditButton" 
+                    class="secondary-button"
+                    hidden
+                >
+                    Cancel Edit
+                </button>
+
+            </div>
+
+        </form>
+
+        <!--display success or error message-->
+        <p id="message"></p>
+
+        </section>
+
+        <!--display the users saved applications-->
+
+        <section class="dashboard-card application-display">
+            <h2>Your Applications</h2>
+
+            <p class="section-description">
+                View and manage your saved job applications
+            </p>
+
+            <!--wrapper allows the table to scroll smaller screens-->
+            <div class="table-wrapper">
+                <table>
+
+                    <!--display the heading for each application property-->
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Date Applied</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                <!--dashboard.js creates the application rows and inserts them 
+                into this table body--> 
+                <tbody id="applicationTableBody"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Modal to display full notes for an application-->
+    <div id="notesModal" class="notes-modal" hidden>
+
+        <!-- Dark background behind the modal-->
+        <div class="notes-modal-overlay"></div>
+
+        <!--main box modal-->
+        <div class="notes-modal-content">
+
+            <!--model heading and close button-->
+            <div class="notes-modal-header">
+                <h2>Application Notes</h2>
+
+                <!-- close the modal-->                                             <!--&times displays x-->
+                <button type="button" id="closeNotesModal" class="notes-modal-close">&times</button>
+            </div>
+
+            <!--Javascrpit will insert seleted application notes right here-->
+            <P id="fullNotesText" class="full-notes-text"></P>
+
+            <!--Button that can close the notes model-->
+            <button type="button" id="closeNotesButton" class="primary-button">Close</button>
+        </div>
+    </div> 
+
+    <!--links the javascript responsible for the dashboards functionality-->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
