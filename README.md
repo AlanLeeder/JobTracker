@@ -59,13 +59,14 @@ Authentication:
 
 3. Install the required dependencies.
 
+   make sure node.js and npm are installed, then run
    ```bash
    npm install
    ```
 
 4. Create the database.
 
-   Open MySQL Workbench and run the provided `database.sql` file.  
+   Make sure MySQL is installed. Open MySQL Workbench and run the provided database.sql file.
    This will create the JobTracker database and the required tables.
 
 5. Create your environment file.
