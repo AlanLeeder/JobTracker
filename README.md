@@ -48,7 +48,7 @@ Authentication:
 1. Clone the repository.
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/JobTracker.git
+   git clone https://github.com/AlanLeeder/JobTracker.git
    ```
 
 2. Navigate into the project folder.
