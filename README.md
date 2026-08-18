@@ -43,6 +43,64 @@ Authentication:
 - Chart tracking the total number of applications submitted by the user
 
 
+# Installation
+
+1. Clone the repository.
+
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/JobTracker.git
+   ```
+
+2. Navigate into the project folder.
+
+   ```bash
+   cd JobTracker
+   ```
+
+3. Install the required dependencies.
+
+   ```bash
+   npm install
+   ```
+
+4. Create the database.
+
+   Open MySQL Workbench and run the provided `database.sql` file.  
+   This will create the JobTracker database and the required tables.
+
+5. Create your environment file.
+
+   Copy the provided `.env.example` file and create a new file called `.env`.
+
+   Replace the placeholder values with your own details:
+
+   ```env
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=your_mysql_password
+   DB_NAME=JobTracker
+   PORT=3000
+   SESSION_SECRET=your_session_secret
+   ```
+
+6. Start the server.
+
+   ```bash
+   node server.js
+   ```
+
+7. Open JobTracker.
+
+   Open your browser and go to:
+
+   `http://localhost:3000`
+
+   Create an account, log in and start tracking your job applications.
+   
+   
+   
+
+
 
 
 
