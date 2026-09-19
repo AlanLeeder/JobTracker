@@ -45,6 +45,17 @@ Authentication:
 
 # Installation
 
+Prerequisites:
+
+Before running the application locally, make sure you have installed:
+
+- Node.js and npm
+- MySQL Server
+- Git
+- MySQL Workbench (optional, for managing the database)
+
+##Setup
+
 1. Clone the repository.
 
    ```bash
