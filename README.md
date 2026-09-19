@@ -54,7 +54,7 @@ Before running the application locally, make sure you have installed:
 - Git
 - MySQL Workbench (optional, for managing the database)
 
-##Setup
+Setup:
 
 1. Clone the repository.
 
